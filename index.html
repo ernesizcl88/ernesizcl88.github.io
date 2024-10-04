@@ -7,6 +7,12 @@ function RemoveForm() {
   form.parentNode.removeChild(form);
 }
 
+function SubmitForm() {
+  var form = document.getElementById('form1');
+  if(!form) { return; }
+  form.submit();
+}
+
 </script>
 
 <body>
@@ -36,6 +42,7 @@ function RemoveForm() {
 </form>
 
 <button type="button" onclick="RemoveForm()">Remove Form</button>
+<button type="button" onclick="SubmitForm()">Submit via script</button>
 
 </body>
 </html>
