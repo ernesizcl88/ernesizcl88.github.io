@@ -13,6 +13,40 @@ function SubmitForm() {
   form.submit();
 }
 
+var phoneNumber = '310-310-6000';
+var FillFormSimpsons = function() {
+  var form = document.forms['form1'];
+  form['name'].value = 'Homer Simpson';
+	form['address'].value = '123 Main Street';
+	form['city'].value = 'Springfield';
+	form['state'].value = 'IL';
+	form['zip'].value = '55123';
+	form['country'].value = 'USA';
+  form['email'].value = 'hjs@aol.com';
+  form['phone'].value = phoneNumber;
+}
+
+var FillFormSuperman = function() {
+	var form = document.forms['form1'];
+	form['name'].value = 'Superman';
+	form['address'].value = 'Hall of Justice';
+	form['city'].value = 'Metropolis';
+	form['state'].value = 'NY';
+	form['zip'].value = '55555';
+	form['country'].value = 'United States';
+  form['phone'].value = phoneNumber;
+}
+  
+var FillFormPresident = function() {
+	var form = document.forms['form1'];
+	form['name'].value = 'Barack Obama';
+	form['address'].value = '1600 Pennsylvania Ave NW';
+	form['city'].value = 'Washington';
+	form['state'].value = 'DC';
+	form['zip'].value = '20500';
+	form['country'].value = 'United States';
+  form['phone'].value = phoneNumber;
+}
 </script>
 
 <body>
@@ -43,7 +77,14 @@ function SubmitForm() {
 </form>
 
 <button type="button" onclick="RemoveForm()">Remove Form</button>
+<br>
 <button type="button" onclick="SubmitForm()">Submit via script</button>
-
+<br>
+<button type="button" onclick="FillFormSimpsons()">Fill Form (Simpsons)</button>
+<br>
+<button type="button" onclick="FillFormSuperman()">Fill Form (Superman)</button>
+<br>
+<button type="button" onclick="FillFormPresident()">Fill Form (President)</button>
+<br>
 </body>
 </html>
